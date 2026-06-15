@@ -91,6 +91,9 @@ Requires Ableton Live with Max for Live.
 
 The `.amxd` files are frozen (self-contained) — no other files needed to run them.
 
+A ready-made example is in **`Sample Live Project/`** — open
+`Arpsplit Sample Project.als` in Live to see the devices wired up and routed.
+
 ## Development
 
 Logic lives in the abstraction + the v8 script; the `.amxd` is a thin shell with
