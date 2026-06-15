@@ -81,15 +81,15 @@ Only notes travel the buses; CC/pitch-bend/etc. stay on the master track
 
 ## Install
 
-Build two devices, freezing each in Live's editor (Edit → snowflake → Save) to
-embed its abstractions/script, then drop them on MIDI tracks:
+Requires Ableton Live with Max for Live.
 
-- **arpsplit.amxd** — the master (`arpsplit.maxpat` + `arpsplit.js` + UI).
-- **arpsplit-recv.amxd** — the per-track receiver (`arpsplit-recv.maxpat` + a
-  Group number box). Only needed for path B (separate tracks).
+1. Download **`arpsplit.amxd`** (and **`arpsplit-recv.amxd`** if you want to fan
+   out to separate tracks — see path B below). Either grab them from the
+   [latest release](../../releases) or download the raw files from this repo.
+2. Drop **`arpsplit.amxd`** onto a MIDI track in Live.
+3. Route it to your instrument(s) using one of the two paths above.
 
-While editing, keep the loose source files beside the `.amxd` (same-folder
-resolution).
+The `.amxd` files are frozen (self-contained) — no other files needed to run them.
 
 ## Development
 
@@ -110,6 +110,9 @@ displays).
 - `caps_labels.maxpat` — paste-in fragment: `unpack` + 15 number boxes spaced to
   sit under the multislider as per-channel value labels.
 - `validate_maxpat.mjs` — structural check: `node validate_maxpat.mjs <file>.maxpat`
+
+To rebuild a device, edit the loose source files (keep them beside the `.amxd`),
+then in Live's Max editor **Freeze (snowflake) → Save** to re-embed them.
 
 ### Notes / limitations (v1)
 
